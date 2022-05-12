@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject shield;
     SpriteRenderer shieldRend;
     [SerializeField] GameObject replayButton;
+    [SerializeField] GameObject returnButton;
     // SceneManagement scene;
     
     
@@ -234,10 +235,15 @@ public class Player : MonoBehaviour
         deathSound.Play();
         Time.timeScale = 0f;
         replayButton.SetActive(true);
+        returnButton.SetActive(true);
     }
 
     public void Replay(){
         Time.timeScale = 1f;
-         SceneManager.LoadScene ("SampleScene");
+        SceneManager.LoadScene ("SampleScene");
+    }
+    public void Return(){
+        
+        SceneManager.LoadScene ("PlayButton");
     }
 }
