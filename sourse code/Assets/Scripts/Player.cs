@@ -243,7 +243,7 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene ("SampleScene");
     }
     public void Return(){
-        
+        Time.timeScale = 1f;
         SceneManager.LoadScene ("PlayButton");
     }
 }
